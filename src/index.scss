@@ -1,0 +1,73 @@
+@import "./var";
+@import "./assets/font/font.css";
+
+body {
+  width: 100%;
+  height: 100%;
+  padding: 3.5rem $space 3rem;
+  background-color: #f3f3f4;
+  @include flex;
+}
+
+#root {
+  width: 100%;
+  max-width: 960px;
+  color: $color-text;
+  @include fontBody;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Prompt;
+  -webkit-tap-highlight-color: transparent;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+.NavActive {
+  color: $color-accent;
+}
+
+.ElementBackgroundColor {
+  background-color: white;
+}
+
+.Detail {
+  >div {
+    display: inline-block;
+  }
+}
+
+.RedBold {
+  @include fontBody($bold);
+  color: $color-accent;
+}
+
+.Bold {
+  @include fontBody($bold);
+}
+
+.RedHightLight {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  @include fontBody($bold);
+  line-height: 1;
+  color: white;
+  background-color: $color-accent;
+  border-radius: 3rem;
+  margin-bottom: 1rem;
+
+  &~* {
+    padding-left: 1rem;
+  }
+}

@@ -1,0 +1,12 @@
+@import "../../../var";
+
+.Box {
+  padding: $space;
+  border-radius: $space;
+}
+
+.Title {
+  @include fontH2;
+  margin-bottom: $space;
+  text-align: left;
+}

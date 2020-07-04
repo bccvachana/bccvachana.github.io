@@ -1,0 +1,65 @@
+@import "../../var";
+
+.About {
+  padding: $space 0 calc(2rem - 20px);
+
+  >div {
+    margin-top: $space;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.TwoColumnGrid {
+  display: grid;
+  grid-template-columns: repeat(2, calc((100% - 20px) / 2));
+  grid-gap: $space;
+
+  @include mobile {
+    grid-template-columns: 100%;
+  }
+}
+
+.TwoColumnFlex {
+  @include flex(row, flex-start, flex-start);
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  >div:first-child {
+    flex-shrink: 0;
+    margin-right: 1rem;
+  }
+}
+
+.Education {
+  :global(.RedBold) {
+    width: 91px;
+  }
+}
+
+.Skills {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+
+  @include mobile {
+    grid-template-columns: auto;
+  }
+
+  :global(.Bold) {
+    width: 100px;
+  }
+}
+
+.Languages {
+  :global(.RedBold) {
+    display: inline-block;
+    width: 56px;
+    margin-right: 1rem;
+  }
+}

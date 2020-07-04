@@ -1,0 +1,39 @@
+@import "../../var";
+
+.Achievements {
+  padding: $space 0 calc(2rem - 20px);
+
+  >div {
+    margin-top: $space;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.Title {
+  @include fontH2;
+  text-align: center;
+}
+
+.DetailContainer {
+  @include flex(row, flex-start, flex-start);
+  margin-bottom: 0.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.RedBullet {
+  position: relative;
+  top: 7px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  margin-right: 1rem;
+  background-color: $color-accent;
+  border-radius: 10px;
+  flex-shrink: 0;
+}

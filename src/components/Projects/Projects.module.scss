@@ -1,0 +1,11 @@
+@import "../../var";
+
+.Projects {
+  padding: $space 0 calc(2rem - 20px);
+}
+
+.Title {
+  margin-bottom: $space;
+  @include fontH2;
+  text-align: center;
+}

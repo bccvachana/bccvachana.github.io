@@ -1,0 +1,102 @@
+@import "../../var";
+
+.Container {
+  width: 100%;
+  text-align: center;
+  @include flex;
+  padding: 2rem 0 calc(2rem - 20px);
+
+  @include desktop {
+    text-align: left;
+    @include flex(row, flex-start, flex-start);
+  }
+}
+
+.Text {
+  @include desktop {
+    margin-top: 0.5rem;
+  }
+}
+
+.Hello {
+  @include fontH2($regular);
+  margin-bottom: $space;
+}
+
+.Name {
+  @include fontH1;
+
+  @include mobile {
+    font-size: 3.5rem;
+  }
+
+  &.NameMobile {
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+}
+
+.Position {
+  @include fontH2($bold);
+  color: $color-accent;
+  margin: 0.5rem 0 $space;
+}
+
+.Detail {
+  line-height: 1.4;
+  display: block;
+
+  @include mobile {
+    display: none;
+  }
+
+  &.DetailMobile {
+    display: none;
+    max-width: 300px;
+    margin: 0 auto;
+
+    @include mobile {
+      display: block;
+    }
+  }
+}
+
+.Image {
+  width: 150px;
+  height: 150px;
+  border-radius: 200px;
+  margin: 0 0 1.5rem;
+  border: 10px solid white;
+
+  @include desktop {
+    margin: 0 2rem 0 0;
+  }
+}
+
+.Contact {
+  margin-top: $space;
+  @include flex(row);
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+
+  a {
+    @include flex;
+    margin: 0 0.5rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
