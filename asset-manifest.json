@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.361eb00f.chunk.css",
+    "main.js": "/static/js/main.de8c9056.chunk.js",
+    "main.js.map": "/static/js/main.de8c9056.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4cbfffd7.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4cbfffd7.js.map",
+    "static/js/2.42800ffa.chunk.js": "/static/js/2.42800ffa.chunk.js",
+    "static/js/2.42800ffa.chunk.js.map": "/static/js/2.42800ffa.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.94146cfaadece9a62bc12eafb75c3486.js": "/precache-manifest.94146cfaadece9a62bc12eafb75c3486.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.361eb00f.chunk.css.map": "/static/css/main.361eb00f.chunk.css.map",
+    "static/js/2.42800ffa.chunk.js.LICENSE.txt": "/static/js/2.42800ffa.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/static/media/Prompt-Thin.ddcfbf89.ttf",
+    "static/media/facebook.svg": "/static/media/facebook.85454b11.svg",
+    "static/media/github.svg": "/static/media/github.4828d900.svg",
+    "static/media/mail.svg": "/static/media/mail.cadb3733.svg",
+    "static/media/phone.svg": "/static/media/phone.5e0de12f.svg",
+    "static/media/profileImg.jpg": "/static/media/profileImg.0af7620c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4cbfffd7.js",
+    "static/js/2.42800ffa.chunk.js",
+    "static/css/main.361eb00f.chunk.css",
+    "static/js/main.de8c9056.chunk.js"
+  ]
+}
