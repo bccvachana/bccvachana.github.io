@@ -7,6 +7,7 @@
   width: 100%;
   height: 3rem;
   padding: 0 $space;
+  z-index: 10;
   @include flex;
 }
 
@@ -60,6 +61,10 @@
     @include mobile {
       margin: 1rem 0;
       @include fontH2;
+    }
+
+    &:hover {
+      color: $color-accent;
     }
   }
 

@@ -1,10 +1,15 @@
 @import "./var";
 @import "./assets/font/font.css";
+@import "./assets/font/font-awesome/css/font-awesome.min.css";
+
+html {
+  @include fontBody;
+  color: $color-text;
+}
 
 body {
   width: 100%;
-  height: 100%;
-  padding: 3.5rem $space 3rem;
+  padding: 3.5rem $space 0;
   background-color: #f3f3f4;
   @include flex;
 }
@@ -12,8 +17,6 @@ body {
 #root {
   width: 100%;
   max-width: 960px;
-  color: $color-text;
-  @include fontBody;
 }
 
 * {
@@ -22,11 +25,23 @@ body {
   box-sizing: border-box;
   font-family: Prompt;
   -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
 
   &:focus {
     outline: none;
     box-shadow: none;
     border: none;
+  }
+}
+
+.App {
+  >* {
+    &:nth-child(n+3) {
+      padding: $space 0 calc(2rem - 20px);
+    }
   }
 }
 
@@ -70,4 +85,36 @@ a {
   &~* {
     padding-left: 1rem;
   }
+}
+
+.RedBullet {
+  position: relative;
+  top: 8px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  margin-right: 1rem;
+  background-color: $color-accent;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.Link {
+  color: $color-accent;
+
+  .fa {
+    margin-right: 0.3rem;
+  }
+
+  a {
+    color: $color-accent;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.Caption {
+  @include fontCaption;
 }

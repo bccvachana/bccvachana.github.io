@@ -1,6 +1,8 @@
 import React from "react";
 import classes from "./About.module.scss";
 import Box from "../UI/Box/Box";
+import Bullet from "../UI/Bullet/Bullet";
+import List from "../UI/List/List";
 
 const About = (props) => {
   return (
@@ -23,20 +25,47 @@ const About = (props) => {
           </div>
         </Box>
 
-        <Box title="Experience">
+        <Box title="Experience" className={classes.Experience}>
           <div className={classes.TwoColumnFlex}>
-            <div className="RedBold">June - July 2019</div>
+            <div className="RedBold">Jan - May 2020</div>
             <div>
-              <div className="Bold">Developer Intern</div>
-              Boonmee Lab
+              <div className="Bold">Teaching Assistant</div>
+              <Bullet>@KMUTT</Bullet>
+              <Bullet>Web Programming</Bullet>
+              <List
+                lists={["HTML", "CSS", "PHP", "SQL"]}
+                className={classes.List}
+              />
             </div>
           </div>
-          <div className="Detail">
-            <div>Data Visualization</div> / <div>Chatbot</div> /{" "}
-            <div>E-Commerce</div>
+          <div className={classes.TwoColumnFlex}>
+            <div className="RedBold">Jun - Jul 2019</div>
+            <div>
+              <div className="Bold">Developer Intern</div>
+              <Bullet>@Boonmee Lab</Bullet>
+              <Bullet>
+                <div className="Detail">
+                  <div>Data Visualization</div> / <div>Chatbot</div> /{" "}
+                  <div>E-Commerce</div>
+                </div>
+              </Bullet>
+              <Bullet>
+                <div className="Link">
+                  <a
+                    href="https://medium.com/@vachanachongrujipinyo/ประสบการณ์ฝึกงาน-เปลี่ยนชีวิต-ที่-boonmee-lab-70b568f95f8e"
+                    target="blank"
+                  >
+                    <i className="fa fa-external-link-square" />
+                    medium
+                  </a>
+                </div>
+              </Bullet>
+              <List
+                lists={["NodeJS", "Vue", "Dialogflow"]}
+                className={classes.List}
+              />
+            </div>
           </div>
-
-          <div className="Bold">#NodeJS &nbsp;#Vue &nbsp;#Dialogflow</div>
         </Box>
       </div>
 
@@ -45,26 +74,35 @@ const About = (props) => {
           <div className="RedHightLight">Programming</div>
           <div className={classes.TwoColumnFlex}>
             <div className="Bold">Intermediate</div>
-            <div>
-              HTML,&nbsp; CSS,&nbsp; SCSS,&nbsp; ES6,&nbsp; NodeJS,&nbsp; React
-            </div>
+            <List
+              comma
+              lists={["HTML", "CSS", "SCSS", "ES6", "NodeJS", "React"]}
+            />
           </div>
           <div className={classes.TwoColumnFlex}>
             <div className="Bold">Beginner</div>
-            <div>
-              Vue,&nbsp; Electron,&nbsp; PHP,&nbsp; SQL,&nbsp; C#,&nbsp; Python
-            </div>
+            <List
+              comma
+              lists={["Vue", "Electron", "PHP", "SQL", "C#", "Python"]}
+            />
           </div>
         </div>
         <div>
           <div className="RedHightLight">Other</div>
-          <div className="Detail">
-            <div>UX/UI Design,</div>&nbsp; <div>Design Thinking,</div>&nbsp;
-            Arduino,&nbsp; Dialogflow,&nbsp; <div>Adobe Illustrator,</div>&nbsp;{" "}
-            <div>Adobe XD</div>
-          </div>
+          <List
+            comma
+            lists={[
+              "UX/UI Design",
+              "Design Thinking",
+              "Arduino",
+              "Dialogflow",
+              "Adobe Illustrator",
+              "Adobe XD",
+            ]}
+          />
         </div>
       </Box>
+
       <div className={classes.TwoColumnGrid}>
         <Box title="Languages" className={classes.Languages}>
           <div>
@@ -74,9 +112,16 @@ const About = (props) => {
             <div className="RedBold">English</div>Intermediate
           </div>
         </Box>
-        <Box title="Interests" className="Detail">
-          Backend,&nbsp; Mobile Application,&nbsp; Chatbot,&nbsp;{" "}
-          <div>Machine Learning</div>
+        <Box title="Interests">
+          <List
+            comma
+            lists={[
+              "Backend",
+              "Mobile Application",
+              "Chatbot",
+              "Machine Learning",
+            ]}
+          />
         </Box>
       </div>
     </div>

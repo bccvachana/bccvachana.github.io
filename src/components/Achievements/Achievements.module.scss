@@ -1,8 +1,6 @@
 @import "../../var";
 
 .Achievements {
-  padding: $space 0 calc(2rem - 20px);
-
   >div {
     margin-top: $space;
 
@@ -18,7 +16,6 @@
 }
 
 .DetailContainer {
-  @include flex(row, flex-start, flex-start);
   margin-bottom: 0.5rem;
 
   &:last-child {
@@ -26,14 +23,41 @@
   }
 }
 
-.RedBullet {
-  position: relative;
-  top: 7px;
-  left: 0;
-  width: 8px;
-  height: 8px;
-  margin-right: 1rem;
-  background-color: $color-accent;
-  border-radius: 10px;
-  flex-shrink: 0;
+.Competition {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .DetailContainer {
+    margin-bottom: 1rem;
+  }
+}
+
+.ImgContainer {
+  padding-left: calc(7px + 0.7rem);
+  @include flex(row);
+
+  @include mobile {
+    @include flex;
+  }
+
+  img {
+    width: calc((100% - 1rem) / 2);
+    border-radius: 1rem;
+
+    &:first-child {
+      margin-right: 1rem;
+    }
+
+    @include mobile {
+      width: 100%;
+
+      &:first-child {
+        margin-bottom: 1rem;
+        margin-right: 0;
+      }
+    }
+  }
 }

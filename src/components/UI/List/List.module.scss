@@ -1,0 +1,18 @@
+@import "../../../var";
+
+.List {
+  >div {
+    display: inline-block;
+    margin-right: 0.7rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include fontBody($bold);
+
+  &.Comma {
+    @include fontBody;
+  }
+}

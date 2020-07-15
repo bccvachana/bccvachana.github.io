@@ -1,8 +1,6 @@
 @import "../../var";
 
 .About {
-  padding: $space 0 calc(2rem - 20px);
-
   >div {
     margin-top: $space;
 
@@ -23,22 +21,54 @@
 }
 
 .TwoColumnFlex {
-  @include flex(row, flex-start, flex-start);
+  @include flex(column, flex-start, flex-start);
   margin-bottom: 1rem;
 
   &:last-child {
     margin-bottom: 0;
   }
 
-  >div:first-child {
+  >*:first-child {
     flex-shrink: 0;
     margin-right: 1rem;
+  }
+
+  >*:nth-child(2) {
+    padding-left: 1rem;
+  }
+
+  @include desktop {
+    flex-direction: row;
+
+    >*:nth-child(2) {
+      padding-left: 0;
+    }
   }
 }
 
 .Education {
   :global(.RedBold) {
     width: 91px;
+    margin-bottom: 0.2rem;
+  }
+
+  :global(.Bold) {
+    margin-bottom: 0.2rem;
+  }
+}
+
+.Experience {
+  :global(.RedBold) {
+    width: 122px;
+    margin-bottom: 0.2rem;
+  }
+
+  :global(.Bold) {
+    margin-bottom: 0.2rem;
+  }
+
+  .List {
+    margin-top: 0.2rem;
   }
 }
 
@@ -53,6 +83,12 @@
 
   :global(.Bold) {
     width: 100px;
+  }
+
+  .TwoColumnFlex {
+    >*:nth-child(2) {
+      padding-left: 0;
+    }
   }
 }
 

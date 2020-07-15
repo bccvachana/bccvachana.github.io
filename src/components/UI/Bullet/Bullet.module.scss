@@ -1,0 +1,17 @@
+@import "../../../var";
+
+.Container {
+  @include flex(row, flex-start, flex-start);
+}
+
+.RedBullet {
+  position: relative;
+  top: 8px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  margin-right: 0.7rem;
+  background-color: $color-accent;
+  border-radius: 10px;
+  flex-shrink: 0;
+}

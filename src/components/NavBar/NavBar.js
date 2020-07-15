@@ -5,7 +5,7 @@ import { Link, Events } from "react-scroll";
 import Hamburger from "../UI/Hamburger/Hamburger";
 
 const offset = -3.5 * 16;
-const navArray = ["Home", "About", "Achievements", "Projects", "Contact"];
+const navArray = ["Home", "About", "Achievements", "Projects"];
 
 const NavBar = (props) => {
   const [isDropDown, setIsDropDown] = useState(false);
