@@ -1,13 +1,14 @@
 @import "../../../var";
 
 @mixin absoluteTransition {
-  transition: all 300ms ease-out;
+  transition: 300ms ease-out;
+  transition-property: width, height, top, left, margin, padding, opacity, visibility;
 }
 
 .Relative {
   position: relative;
-  //width: 100%;
-  height: 307.8px;
+  width: 100%;
+  height: 311px;
 }
 
 .Absolute {
@@ -16,7 +17,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  @include flex($justify: flex-start);
+  @include flex;
   @include absoluteTransition;
   cursor: pointer;
   pointer-events: none;
@@ -33,63 +34,136 @@
   visibility: hidden;
   @include absoluteTransition;
   cursor: pointer;
+}
 
-  &.Active {
-    opacity: 0.7;
-    visibility: visible;
+.Box {
+  position: relative;
+  width: 100%;
+  //height: 100%;
+  pointer-events: auto;
+  transition: all 200ms ease-out;
+  box-shadow: none;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0.5rem 0.5rem #EBEBEC;
   }
+}
+
+:global(.DarkMode) {
+  .Box:hover {
+    box-shadow: 0.5rem 0.5rem #262626;
+  }
+
+  .Active .Box {
+    box-shadow: none;
+  }
+}
+
+.BoxContainer {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: inherit;
+  @include absoluteTransition;
 }
 
 .Cover {
-  position: relative;
   width: 100%;
   height: 150px;
   border-radius: 5px;
-  margin-bottom: $space;
-  overflow: hidden;
   background-color: white;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
   opacity: 1;
-  @include absoluteTransition;
-
-  .CoverImg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 250ms ease-out;
-  }
 }
 
-.Absolute:hover {
-  .CoverImg {
-    width: 108%;
-    height: 108%;
-    top: -4%;
-    left: -4%;
-  }
-}
-
-.Year {
-  margin-bottom: 0.3rem;
+.Header {
+  position: absolute;
+  top: 190px;
+  left: $space;
+  padding-bottom: 0.5rem;
+  z-index: 1;
+  background-color: inherit;
 }
 
 .Title {
   @include fontH2;
-  line-height: 1;
 }
 
 .Caption {
   height: 45px;
+  margin-top: calc(20px + 56px);
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   white-space: initial;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  opacity: 1;
+}
+
+.Detail {
+  opacity: 0;
+  animation: detailFade 300ms ease-out 300ms 1 forwards;
+
+  >* {
+    margin-top: 1rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+@keyframes detailFade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.Link {
+  >div {
+    display: inline-block;
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.Images {
+  @include flex(row, $wrap: wrap);
+  margin-top: 0.5rem;
+
+  >img {
+    height: 293px;
+    margin: 10px;
+    border-radius: 1rem;
+
+    @include mobile {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 500px;
+    }
+  }
+}
+
+.Close {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: $color-accent;
+  font-size: 26px;
+  cursor: pointer;
 }
 
 .Active {
@@ -98,23 +172,21 @@
     visibility: visible;
   }
 
-  .Cover {
-    height: 0;
-    margin-bottom: 0;
-    opacity: 0;
+  .Box {
+    box-shadow: none;
   }
 
-  .Caption {
-    display: none;
+  .Header {
+    top: $space;
   }
 
-  .Box {}
+  .BoxContainer {
+    height: calc(100% - 56px - 8px);
+    margin-top: 56px;
+    padding-top: 0.5rem;
+  }
+
+  .Close {
+    display: block;
+  }
 }
-
-// .Hash {
-//   margin-right: 0.7rem;
-
-//   &:last-child {
-//     margin-right: 0;
-//   }
-// }

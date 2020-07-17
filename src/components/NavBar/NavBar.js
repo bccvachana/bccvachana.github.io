@@ -3,6 +3,7 @@ import classes from "./NavBar.module.scss";
 import { Link, Events } from "react-scroll";
 
 import Hamburger from "../UI/Hamburger/Hamburger";
+import DarkModeSwitch from "../UI/DarkModeSwitch/DarkModeSwitch";
 
 const offset = -3.5 * 16;
 const navArray = ["Home", "About", "Achievements", "Projects"];
@@ -10,6 +11,7 @@ const navArray = ["Home", "About", "Achievements", "Projects"];
 const NavBar = (props) => {
   const [isDropDown, setIsDropDown] = useState(false);
   const dropDownRef = useRef();
+
   window.onclick = (event) => {
     if (dropDownRef.current) {
       if (
@@ -20,6 +22,7 @@ const NavBar = (props) => {
       }
     }
   };
+
   useEffect(() => {
     Events.scrollEvent.register("begin", () => {
       setIsDropDown(false);
@@ -32,12 +35,15 @@ const NavBar = (props) => {
 
   return (
     <div className={classes.NavBar}>
-      <div className={classes.Background} />
+      <div
+        className={`${classes.Background} ${classes.BackgroundDropShadowColor}`}
+      />
       <div className={classes.BarDesktop}>
         <Logo />
         <div className={classes.Link}>
           <Links />
-          <div className={classes.Switch}>darkMode</div>
+          <div className={classes.Line} />
+          <DarkModeSwitch />
         </div>
       </div>
       <div className={classes.BarMobile}>
@@ -45,7 +51,7 @@ const NavBar = (props) => {
         <Hamburger isDropDown={isDropDown} setIsDropDown={setIsDropDown} />
       </div>
       <div
-        className={`${classes.Dropdown} ${
+        className={`${classes.Dropdown} ${classes.BackgroundDropShadowColor} ${
           isDropDown ? classes.DropdownActive : ""
         }`}
         ref={dropDownRef}
@@ -53,7 +59,7 @@ const NavBar = (props) => {
         <div className={classes.Link}>
           <Links />
         </div>
-        <div className={classes.Switch}>darkMode</div>
+        <DarkModeSwitch />
       </div>
     </div>
   );

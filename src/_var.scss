@@ -62,3 +62,7 @@ $space : 20px;
   font-weight: $weight;
   line-height: $line;
 }
+
+@mixin darkModeTransition {
+  transition: background-color 300ms ease-out, color 300ms ease-out, box-shadow 300ms ease-out;
+}

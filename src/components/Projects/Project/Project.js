@@ -2,11 +2,13 @@ import React, { useState, useRef, useEffect, useContext } from "react";
 import classes from "./Project.module.scss";
 
 import Box from "../../UI/Box/Box";
+import List from "../../UI/List/List";
+import Link from "../../UI/Link/Link";
 import { DeviceInfoContext } from "../../../hoc/withDeviceInfo";
 
 const Project = (props) => {
   const { data } = props;
-  const { title, detail, year, cover, hash } = data;
+  const { title, caption, link, detail, year, cover, hash, images } = data;
   const { device, innerWidth, innerHeight, scroll } = useContext(
     DeviceInfoContext
   );
@@ -26,7 +28,8 @@ const Project = (props) => {
       relative.current.style.zIndex = `1`;
       timer = setTimeout(() => {
         relative.current.style.zIndex = `0`;
-        document.body.style = "";
+        document.body.style.position = "";
+        document.body.style.top = "";
         window.scrollTo(0, parseInt(scroll || "0"));
       }, 350);
     }
@@ -59,35 +62,58 @@ const Project = (props) => {
                 left: `-${relative.current.offsetLeft}px`,
                 padding:
                   device === "Desktop"
-                    ? `20px ${(innerWidth - 860) / 2}px`
-                    : `20px`,
+                    ? `40px ${(innerWidth - 860) / 2}px`
+                    : `40px 20px`,
                 cursor: "default",
               }
             : null
         }
       >
         <Box
-          style={{
-            width: `100%`,
-            //height: `100%`,
-            pointerEvents: "auto",
-          }}
           onClick={() => {
-            setIsOpen(true);
+            if (!isOpen) setIsOpen(true);
           }}
           className={classes.Box}
+          containerClassName={classes.BoxContainer}
         >
-          <div className={classes.Cover}>
+          <i
+            className={`${classes.Close} fa fa-times-circle`}
+            onClick={() => {
+              setIsOpen(false);
+            }}
+          />
+          {!isOpen ? (
             <div
-              className={classes.CoverImg}
-              style={{
-                backgroundImage: `url(${cover})`,
-              }}
+              className={classes.Cover}
+              style={{ backgroundImage: `url(${cover})` }}
             />
+          ) : null}
+          <div className={classes.Header}>
+            <div className={`Bold ${classes.Title}`}>{title}</div>
+            <div className="RedBold">{year}</div>
           </div>
-          <div className={`Bold ${classes.Title}`}>{title}</div>
-          <div className={`RedBold ${classes.Year}`}>{year}</div>
-          <div className={classes.Caption}>{detail}</div>
+          {!isOpen ? <div className={classes.Caption}>{caption}</div> : null}
+          <div
+            className={classes.Detail}
+            style={{ display: isOpen ? "block" : "none" }}
+          >
+            <div className={classes.Link}>
+              {link.map(({ name, to }) => (
+                <Link name={name ? name : "GitHub"} to={to} key={to} />
+              ))}
+            </div>
+            <div>{detail}</div>
+            <List lists={hash} />
+            <div className={classes.Images}>
+              {images.map((img, index) => (
+                <img
+                  src={img}
+                  alt={`${title}_${index}`}
+                  key={`${title}_${index}`}
+                />
+              ))}
+            </div>
+          </div>
         </Box>
       </div>
     </div>

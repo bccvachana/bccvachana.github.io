@@ -10,13 +10,16 @@ html {
 body {
   width: 100%;
   padding: 3.5rem $space 0;
-  background-color: #f3f3f4;
+  overflow-y: scroll;
+  overflow-x: hidden;
   @include flex;
+  @include darkModeTransition;
 }
 
 #root {
   width: 100%;
   max-width: 960px;
+
 }
 
 * {
@@ -55,6 +58,7 @@ a {
 
 .ElementBackgroundColor {
   background-color: white;
+  @include darkModeTransition;
 }
 
 .Detail {
@@ -99,22 +103,14 @@ a {
   flex-shrink: 0;
 }
 
-.Link {
-  color: $color-accent;
-
-  .fa {
-    margin-right: 0.3rem;
-  }
-
-  a {
-    color: $color-accent;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
 .Caption {
   @include fontCaption;
+}
+
+.DarkMode {
+  color: white;
+
+  .ElementBackgroundColor {
+    background-color: #2E2E2E;
+  }
 }

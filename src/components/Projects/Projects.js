@@ -9,8 +9,8 @@ const Projects = (props) => {
     <div id="Projects" className={classes.Projects}>
       <div className={classes.Title}>Projects</div>
       <div className={classes.Container}>
-        {data.map((data) => (
-          <Project data={data}></Project>
+        {data.map((data, index) => (
+          <Project data={data} key={index}></Project>
         ))}
       </div>
     </div>

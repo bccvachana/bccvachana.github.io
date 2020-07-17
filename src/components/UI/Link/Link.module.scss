@@ -1,0 +1,17 @@
+@import "../../../var";
+
+.Link {
+  color: $color-accent;
+
+  :global(.fa) {
+    margin-right: 0.3rem;
+  }
+
+  a {
+    color: $color-accent;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -67,9 +67,16 @@
   border-radius: 200px;
   margin: 0 0 1.5rem;
   border: 10px solid white;
+  transition: border 300ms ease-out;
 
   @include desktop {
     margin: 0 2rem 0 0;
+  }
+}
+
+:global(.DarkMode) {
+  .Image {
+    border: 10px solid #2E2E2E;
   }
 }
 

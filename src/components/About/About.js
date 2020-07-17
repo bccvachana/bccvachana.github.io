@@ -3,6 +3,7 @@ import classes from "./About.module.scss";
 import Box from "../UI/Box/Box";
 import Bullet from "../UI/Bullet/Bullet";
 import List from "../UI/List/List";
+import Link from "../UI/Link/Link";
 
 const About = (props) => {
   return (
@@ -50,15 +51,10 @@ const About = (props) => {
                 </div>
               </Bullet>
               <Bullet>
-                <div className="Link">
-                  <a
-                    href="https://medium.com/@vachanachongrujipinyo/ประสบการณ์ฝึกงาน-เปลี่ยนชีวิต-ที่-boonmee-lab-70b568f95f8e"
-                    target="blank"
-                  >
-                    <i className="fa fa-external-link-square" />
-                    medium
-                  </a>
-                </div>
+                <Link
+                  to="https://medium.com/@vachanachongrujipinyo/ประสบการณ์ฝึกงาน-เปลี่ยนชีวิต-ที่-boonmee-lab-70b568f95f8e"
+                  name="medium"
+                />
               </Bullet>
               <List
                 lists={["NodeJS", "Vue", "Dialogflow"]}
@@ -69,7 +65,7 @@ const About = (props) => {
         </Box>
       </div>
 
-      <Box title="Skills" className={classes.Skills}>
+      <Box title="Skills" containerClassName={classes.Skills}>
         <div>
           <div className="RedHightLight">Programming</div>
           <div className={classes.TwoColumnFlex}>

@@ -39,6 +39,12 @@
   }
 }
 
+:global(.DarkMode) {
+  .Bar {
+    background-color: white;
+  }
+}
+
 
 .ButtonActive {
 

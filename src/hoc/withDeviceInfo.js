@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const checkDevice = () => {
   const windowWidth = window.innerWidth;
@@ -16,6 +16,8 @@ const withDeviceInfo = (WrappedComponent) => {
     const [innerHeight, setinnerHeight] = useState(window.innerHeight);
     const [scroll, setScroll] = useState(0);
 
+    const windowRef = useRef();
+
     useEffect(() => {
       window.onscroll = () => {
         if (document.body.style.position !== "fixed") {
@@ -24,8 +26,8 @@ const withDeviceInfo = (WrappedComponent) => {
       };
       window.onresize = () => {
         setDevice(checkDevice());
-        setInnerWidth(window.innerWidth);
-        setinnerHeight(window.innerHeight);
+        setInnerWidth(windowRef.current.clientWidth);
+        setinnerHeight(windowRef.current.clientHeight);
       };
     }, []);
 
@@ -38,6 +40,18 @@ const withDeviceInfo = (WrappedComponent) => {
           scroll: scroll,
         }}
       >
+        <div
+          ref={windowRef}
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            padding: 0,
+            pointerEvents: "none",
+          }}
+        />
         <WrappedComponent {...props} />
       </DeviceInfoContext.Provider>
     );
