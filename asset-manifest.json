@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.beeedcfa.chunk.css",
-    "main.js": "/static/js/main.9f2aa0f8.chunk.js",
-    "main.js.map": "/static/js/main.9f2aa0f8.chunk.js.map",
+    "main.css": "/static/css/main.5e85ea20.chunk.css",
+    "main.js": "/static/js/main.c0a649c5.chunk.js",
+    "main.js.map": "/static/js/main.c0a649c5.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7e37ae3f.js",
     "runtime-main.js.map": "/static/js/runtime-main.7e37ae3f.js.map",
-    "static/js/2.8356a2d8.chunk.js": "/static/js/2.8356a2d8.chunk.js",
-    "static/js/2.8356a2d8.chunk.js.map": "/static/js/2.8356a2d8.chunk.js.map",
+    "static/js/2.38b79ea1.chunk.js": "/static/js/2.38b79ea1.chunk.js",
+    "static/js/2.38b79ea1.chunk.js.map": "/static/js/2.38b79ea1.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.e673d4738b6a213a9a0f37fd42df0d45.js": "/precache-manifest.e673d4738b6a213a9a0f37fd42df0d45.js",
+    "precache-manifest.e617c618244619e1cbb3fcae22c542c5.js": "/precache-manifest.e617c618244619e1cbb3fcae22c542c5.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.beeedcfa.chunk.css.map": "/static/css/main.beeedcfa.chunk.css.map",
-    "static/js/2.8356a2d8.chunk.js.LICENSE.txt": "/static/js/2.8356a2d8.chunk.js.LICENSE.txt",
+    "static/css/main.5e85ea20.chunk.css.map": "/static/css/main.5e85ea20.chunk.css.map",
+    "static/js/2.38b79ea1.chunk.js.LICENSE.txt": "/static/js/2.38b79ea1.chunk.js.LICENSE.txt",
     "static/media/1.png": "/static/media/1.14cbe0a9.png",
     "static/media/1.jpg": "/static/media/1.a59bd483.jpg",
     "static/media/1.svg": "/static/media/1.7b3322df.svg",
@@ -23,6 +23,7 @@
     "static/media/4.png": "/static/media/4.89e97ff8.png",
     "static/media/5.png": "/static/media/5.1ef6b427.png",
     "static/media/index.scss": "/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/Resume-Vachana.pdf": "/static/media/Resume-Vachana.889ec2c2.pdf",
     "static/media/facebook.svg": "/static/media/facebook.85454b11.svg",
     "static/media/github.svg": "/static/media/github.4828d900.svg",
     "static/media/mail.svg": "/static/media/mail.cadb3733.svg",
@@ -37,8 +38,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.7e37ae3f.js",
-    "static/js/2.8356a2d8.chunk.js",
-    "static/css/main.beeedcfa.chunk.css",
-    "static/js/main.9f2aa0f8.chunk.js"
+    "static/js/2.38b79ea1.chunk.js",
+    "static/css/main.5e85ea20.chunk.css",
+    "static/js/main.c0a649c5.chunk.js"
   ]
 }
