@@ -47,6 +47,7 @@ const withDeviceInfo = (WrappedComponent) => {
             top: 0,
             left: 0,
             width: "100%",
+            minWidth: `320px`,
             height: "100%",
             padding: 0,
             pointerEvents: "none",
