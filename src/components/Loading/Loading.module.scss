@@ -8,5 +8,5 @@
   height: 100%;
   z-index: 100;
   @include flex;
-  transition: ease-out 300ms;
+  transition: all ease-out 300ms;
 }
