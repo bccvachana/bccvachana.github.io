@@ -12,7 +12,6 @@ const DarkModeSwitch = (props) => {
         className={classes.SwitchContainer}
         onClick={() => {
           setDarkMode(!darkMode);
-          sessionStorage.setItem("vachanaDarkMode", !darkMode);
         }}
       >
         <div

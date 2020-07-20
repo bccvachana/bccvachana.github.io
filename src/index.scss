@@ -1,17 +1,34 @@
 @import "./var";
-@import "./assets/font/font.css";
+@import "./assets/font/font.scss";
 @import "./assets/font/font-awesome/css/font-awesome.min.css";
 
-html {
-  @include fontBody;
-  color: $color-text;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-family: Prompt;
+
+  &:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
 }
 
 body {
   width: 100%;
+  min-width: 320px;
   padding: 3.5rem $space 0;
   overflow-y: scroll;
   overflow-x: hidden;
+  background-color: $color-background;
+  color: $color-text;
+  @include fontBody;
   @include flex;
   @include darkModeTransition;
 }
@@ -19,45 +36,18 @@ body {
 #root {
   width: 100%;
   max-width: 960px;
-
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Prompt;
-  -webkit-tap-highlight-color: transparent;
-  text-decoration: none;
-  border: none;
-  outline: none;
-  box-shadow: none;
-
-  &:focus {
-    outline: none;
-    box-shadow: none;
-    border: none;
-  }
 }
 
 .App {
   >* {
     &:nth-child(n+3) {
-      padding: $space 0 calc(2rem - 20px);
+      padding: $space 0 calc(2rem - #{$space});
     }
   }
 }
 
-a {
-  cursor: pointer;
-}
-
-.NavActive {
-  color: $color-accent;
-}
-
 .ElementBackgroundColor {
-  background-color: white;
+  background-color: $color-element;
   @include darkModeTransition;
 }
 
@@ -77,40 +67,27 @@ a {
 }
 
 .RedHightLight {
-  display: inline-block;
-  padding: 0.35rem 1rem;
-  @include fontBody($bold);
-  line-height: 1;
-  color: white;
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
   background-color: $color-accent;
   border-radius: 3rem;
-  margin-bottom: 1rem;
+  color: white;
+  line-height: 1;
+  @include fontBody($bold);
 
   &~* {
     padding-left: 1rem;
   }
 }
 
-.RedBullet {
-  position: relative;
-  top: 8px;
-  left: 0;
-  width: 7px;
-  height: 7px;
-  margin-right: 1rem;
-  background-color: $color-accent;
-  border-radius: 10px;
-  flex-shrink: 0;
-}
-
-.Caption {
-  @include fontCaption;
-}
-
 .DarkMode {
-  color: white;
+  background-color: $darkMode-color-background;
+  color: $darkMode-color-text;
 
   .ElementBackgroundColor {
-    background-color: #2E2E2E;
+    background-color: $darkMode-color-element;
   }
 }

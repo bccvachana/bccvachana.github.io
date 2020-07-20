@@ -1,9 +1,15 @@
+// Colors
 $color-accent: #EF3F4D;
+$color-background: #F3F3F4;
+$color-element: white;
+$color-shadow: #EBEBEC;
 $color-text: #282828;
+$darkMode-color-background: #1E1E1E;
+$darkMode-color-element: #2E2E2E;
+$darkMode-color-shadow: #262626;
+$darkMode-color-text: white;
 
-$bold : 700;
-$regular : 400;
-$space : 20px;
+//Responsive
 
 @mixin mobile {
   @media only screen and (max-width: 767px) {
@@ -37,7 +43,7 @@ $space : 20px;
   flex-wrap: $wrap;
 }
 
-//FONT
+//Font
 
 @mixin fontH1($weight: $bold) {
   font-size: 3rem;
@@ -63,6 +69,13 @@ $space : 20px;
   line-height: $line;
 }
 
-@mixin darkModeTransition {
-  transition: background-color 300ms ease-out, color 300ms ease-out, box-shadow 300ms ease-out;
+//Other
+
+$bold : 700;
+$regular : 400;
+$space : 20px;
+
+@mixin darkModeTransition($add:"") {
+  transition: background-color 300ms ease-out,
+  #{$add};
 }

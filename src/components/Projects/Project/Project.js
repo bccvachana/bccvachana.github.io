@@ -15,8 +15,6 @@ const Project = (props) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const relative = useRef();
-  const absolute = useRef();
-  const backDrop = useRef();
 
   useEffect(() => {
     let timer;
@@ -36,7 +34,7 @@ const Project = (props) => {
     return () => {
       clearTimeout(timer);
     };
-  }, [isOpen]);
+  }, [isOpen]); // eslint-disable-line
 
   return (
     <div
@@ -45,14 +43,12 @@ const Project = (props) => {
     >
       <div
         className={classes.BackDrop}
-        ref={backDrop}
         onClick={() => {
           setIsOpen(false);
         }}
       />
       <div
         className={classes.Absolute}
-        ref={absolute}
         style={
           isOpen
             ? {
@@ -64,7 +60,6 @@ const Project = (props) => {
                   device === "Desktop"
                     ? `40px ${(innerWidth - 860) / 2}px`
                     : `40px 20px`,
-                cursor: "default",
               }
             : null
         }

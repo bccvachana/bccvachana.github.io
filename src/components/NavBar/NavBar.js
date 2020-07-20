@@ -34,26 +34,26 @@ const NavBar = (props) => {
   }, []);
 
   return (
-    <div className={classes.NavBar}>
+    <React.Fragment>
       <div
-        className={`${classes.Background} ${classes.BackgroundDropShadowColor}`}
-      />
-      <div className={classes.BarDesktop}>
-        <Logo />
-        <div className={classes.Link}>
-          <Links />
-          <div className={classes.Line} />
-          <DarkModeSwitch />
+        className={`${classes.NavBar} ElementBackgroundColor ${classes.BoxShadow}`}
+      >
+        <div className={`${classes.Container} ${classes.TabletDesktop}`}>
+          <Logo />
+          <div className={classes.Link}>
+            <Links />
+            <div className={classes.Line} />
+            <DarkModeSwitch />
+          </div>
+        </div>
+        <div className={`${classes.Container} ${classes.Mobile} NavDropdown`}>
+          <Logo />
+          <Hamburger isDropDown={isDropDown} setIsDropDown={setIsDropDown} />
         </div>
       </div>
-      <div className={classes.BarMobile}>
-        <Logo />
-        <Hamburger isDropDown={isDropDown} setIsDropDown={setIsDropDown} />
-      </div>
       <div
-        className={`${classes.Dropdown} ${classes.BackgroundDropShadowColor} ${
-          isDropDown ? classes.DropdownActive : ""
-        }`}
+        className={` ${classes.Dropdown} ElementBackgroundColor ${classes.BoxShadow}`}
+        style={{ transform: `translateY(${isDropDown ? "0" : "-100%"})` }}
         ref={dropDownRef}
       >
         <div className={classes.Link}>
@@ -61,7 +61,7 @@ const NavBar = (props) => {
         </div>
         <DarkModeSwitch />
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
@@ -74,7 +74,6 @@ const Links = () => {
         <Link
           to={nav}
           key={nav}
-          activeClass="NavActive"
           spy={true}
           smooth={true}
           duration={500}

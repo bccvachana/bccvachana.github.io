@@ -14,16 +14,21 @@ export const Context = React.createContext();
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [darkMode, setDarkMode] = useState(
-    sessionStorage.getItem("vachanaDarkMode") === "true" ? true : false
+    localStorage.getItem("vachanaDarkMode") === "true" ? true : false
   );
-
   useEffect(() => {
-    document.body.style.backgroundColor = darkMode ? "#1E1E1E" : "#f3f3f4";
+    localStorage.setItem("vachanaDarkMode", darkMode);
+    document.body.className = darkMode ? "DarkMode" : "";
   }, [darkMode]);
 
   return (
-    <React.Fragment>
-      <Loading isLoaded={isLoaded} darkMode={darkMode} />
+    <Context.Provider
+      value={{
+        isLoaded: isLoaded,
+        darkMode: darkMode,
+        setDarkMode: setDarkMode,
+      }}
+    >
       <OnImagesLoaded
         onLoaded={() => {
           let timer = setTimeout(() => {
@@ -32,20 +37,17 @@ const App = () => {
           }, 2000);
         }}
       >
-        <Context.Provider
-          value={{ darkMode: darkMode, setDarkMode: setDarkMode }}
-        >
-          <div className={`App ${darkMode ? "DarkMode" : ""}`}>
-            <NavBar setDarkMode={setDarkMode} />
-            <Header />
-            <About />
-            <Achievements />
-            <Projects />
-            <Footer />
-          </div>
-        </Context.Provider>
+        <Loading />
+        <div className="App">
+          <NavBar />
+          <Header />
+          <About />
+          <Achievements />
+          <Projects />
+          <Footer />
+        </div>
       </OnImagesLoaded>
-    </React.Fragment>
+    </Context.Provider>
   );
 };
 

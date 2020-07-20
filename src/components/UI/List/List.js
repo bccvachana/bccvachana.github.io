@@ -5,9 +5,9 @@ const List = (props) => {
   const { comma, lists, className } = props;
   return (
     <div
-      className={`${classes.List} ${
-        comma ? classes["Comma"] : ""
-      } ${className} `}
+      className={`${classes.List} ${comma ? classes["Comma"] : ""} ${
+        className ? className : ""
+      }`}
     >
       {lists.map((list, index) => (
         <div key={list}>

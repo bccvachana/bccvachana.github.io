@@ -6,7 +6,7 @@ import data from "./projectData";
 
 const Projects = (props) => {
   return (
-    <div id="Projects" className={classes.Projects}>
+    <div id="Projects">
       <div className={classes.Title}>Projects</div>
       <div className={classes.Container}>
         {data.map((data, index) => (

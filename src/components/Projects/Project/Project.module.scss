@@ -1,8 +1,7 @@
 @import "../../../var";
 
 @mixin absoluteTransition {
-  transition: 300ms ease-out;
-  transition-property: width, height, top, left, margin, padding, opacity, visibility;
+  transition: all 250ms ease-out;
 }
 
 .Relative {
@@ -17,9 +16,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  @include flex;
   @include absoluteTransition;
-  cursor: pointer;
   pointer-events: none;
 }
 
@@ -39,20 +36,21 @@
 .Box {
   position: relative;
   width: 100%;
-  //height: 100%;
+  height: 100%;
   pointer-events: auto;
-  transition: all 200ms ease-out;
   box-shadow: none;
   overflow: hidden;
+  cursor: pointer;
+  @include darkModeTransition(box-shadow 200ms ease-out);
 
   &:hover {
-    box-shadow: 0.5rem 0.5rem #EBEBEC;
+    box-shadow: 0.5rem 0.5rem $color-shadow;
   }
 }
 
 :global(.DarkMode) {
   .Box:hover {
-    box-shadow: 0.5rem 0.5rem #262626;
+    box-shadow: 0.5rem 0.5rem $darkMode-color-shadow;
   }
 
   .Active .Box {
@@ -64,19 +62,15 @@
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: inherit;
-  @include absoluteTransition;
 }
 
 .Cover {
   width: 100%;
   height: 150px;
   border-radius: 5px;
-  background-color: white;
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 1;
 }
 
 .Header {
@@ -85,7 +79,6 @@
   left: $space;
   padding-bottom: 0.5rem;
   z-index: 1;
-  background-color: inherit;
 }
 
 .Title {
@@ -94,19 +87,18 @@
 
 .Caption {
   height: 45px;
-  margin-top: calc(20px + 56px);
+  margin-top: calc(#{$space} + 56px);
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   white-space: initial;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  opacity: 1;
 }
 
 .Detail {
   opacity: 0;
-  animation: detailFade 300ms ease-out 300ms 1 forwards;
+  animation: detailFade 250ms ease-out 250ms 1 forwards;
 
   >* {
     margin-top: 1rem;
@@ -140,11 +132,11 @@
 
 .Images {
   @include flex(row, $wrap: wrap);
-  margin-top: 0.5rem;
+  margin-top: 2px;
 
   >img {
     height: 293px;
-    margin: 10px;
+    margin: $space 10px 0;
     border-radius: 1rem;
 
     @include mobile {
@@ -159,10 +151,10 @@
 .Close {
   display: none;
   position: absolute;
-  top: 20px;
-  right: 20px;
-  color: $color-accent;
+  top: $space;
+  right: $space;
   font-size: 26px;
+  color: $color-accent;
   cursor: pointer;
 }
 
@@ -174,6 +166,7 @@
 
   .Box {
     box-shadow: none;
+    cursor: default;
   }
 
   .Header {
@@ -181,7 +174,7 @@
   }
 
   .BoxContainer {
-    height: calc(100% - 56px - 8px);
+    height: calc(100% - 56px);
     margin-top: 56px;
     padding-top: 0.5rem;
   }

@@ -73,7 +73,7 @@ export default [
       "WooBIN is an interactive waste-sorting assistant which can identify what type of waste by using camera and display different emotional faces to respond users' behavior.",
     year: "2018 - 2019",
     cover: wooBin_1,
-    hash: ["ObjectDetection", "Unity", "Arduino", "Tensorflow"],
+    hash: ["Unity", "Tensorflow", "ObjectDetection", "Arduino"],
     images: [wooBin_1, wooBin_2, wooBin_3, wooBin_4],
   },
   {

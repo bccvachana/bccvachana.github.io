@@ -41,7 +41,7 @@
 
 :global(.DarkMode) {
   .Bar {
-    background-color: white;
+    background-color: $darkMode-color-text;
   }
 }
 

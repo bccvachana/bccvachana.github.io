@@ -1,10 +1,10 @@
 @import "../../var";
 
-.Container {
+.Header {
   width: 100%;
   text-align: center;
   @include flex;
-  padding: 2rem 0 calc(2rem - 20px);
+  padding-top: 2rem !important;
 
   @include desktop {
     text-align: left;
@@ -12,7 +12,28 @@
   }
 }
 
+.Image {
+  width: 150px;
+  height: 150px;
+  margin: 0 0 1.7rem;
+  border: 10px solid $color-element;
+  border-radius: 200px;
+  transition: border 300ms ease-out;
+
+  @include desktop {
+    margin: 0 2rem 0 0;
+  }
+}
+
+:global(.DarkMode) {
+  .Image {
+    border: 10px solid $darkMode-color-element;
+  }
+}
+
 .Text {
+  width: 100%;
+
   @include desktop {
     margin-top: 0.5rem;
   }
@@ -30,7 +51,7 @@
     font-size: 3.5rem;
   }
 
-  &.NameMobile {
+  &.LastName {
     @include mobile {
       font-size: 2rem;
     }
@@ -44,8 +65,6 @@
 }
 
 .Detail {
-  display: block;
-
   @include mobile {
     display: none;
   }
@@ -58,25 +77,6 @@
     @include mobile {
       display: block;
     }
-  }
-}
-
-.Image {
-  width: 150px;
-  height: 150px;
-  border-radius: 200px;
-  margin: 0 0 1.5rem;
-  border: 10px solid white;
-  transition: border 300ms ease-out;
-
-  @include desktop {
-    margin: 0 2rem 0 0;
-  }
-}
-
-:global(.DarkMode) {
-  .Image {
-    border: 10px solid #2E2E2E;
   }
 }
 
