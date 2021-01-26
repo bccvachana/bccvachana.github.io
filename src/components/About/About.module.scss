@@ -1,7 +1,7 @@
 @import "../../var";
 
 .About {
-  >div {
+  > div {
     margin-top: $space;
 
     &:first-child {
@@ -28,7 +28,7 @@
     margin-bottom: 0;
   }
 
-  >* {
+  > * {
     &:first-child {
       flex-shrink: 0;
       margin-right: 1rem;
@@ -42,7 +42,7 @@
   :global(.RedBold) {
     margin-bottom: 0.2rem;
 
-    &+* {
+    & + * {
       padding-left: 1rem;
 
       @include desktop {
@@ -64,7 +64,7 @@
 
 .Experience {
   :global(.RedBold) {
-    width: 122px;
+    width: 157px;
   }
 
   .List {

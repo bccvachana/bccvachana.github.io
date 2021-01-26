@@ -28,11 +28,33 @@ const About = (props) => {
 
         <Box title="Experience" className={classes.Experience}>
           <div className={classes.TwoColumnFlex}>
+            <div className="RedBold">Aug 2020 - Present</div>
+            <div>
+              <div className="Bold">Junior Software Engineer</div>
+              <Bullet>@Sunday</Bullet>
+              <Bullet>Main responsible for internal platform front-end</Bullet>
+              <Bullet>
+                Implemented websites, mobile application and landing pages
+                front-end using React and NextJS
+              </Bullet>
+              <Bullet>
+                Designed and developed front-end platform for underwriting
+                insurance policies using React, Typescript, Antd and SCSS
+              </Bullet>
+              <List
+                lists={["React", "NextJS", "Typescipt", "NodeJS"]}
+                className={classes.List}
+              />
+            </div>
+          </div>
+          <div className={classes.TwoColumnFlex}>
             <div className="RedBold">Jan - May 2020</div>
             <div>
               <div className="Bold">Teaching Assistant</div>
               <Bullet>@KMUTT</Bullet>
-              <Bullet>Web Programming</Bullet>
+              <Bullet>
+                Asisted and mentored students in Web Programming class
+              </Bullet>
               <List
                 lists={["HTML", "CSS", "PHP", "SQL"]}
                 className={classes.List}
@@ -45,10 +67,14 @@ const About = (props) => {
               <div className="Bold">Developer Intern</div>
               <Bullet>@Boonmee Lab</Bullet>
               <Bullet>
-                <div className="Detail">
-                  <div>Data Visualization</div> / <div>Chatbot</div> /{" "}
-                  <div>E-Commerce</div>
-                </div>
+                Implemented services for chatbot API using NodeJS and Dialogflow
+              </Bullet>
+              <Bullet>
+                Built an interactive map and data visualization website using
+                NuxtJS and Mapbox
+              </Bullet>
+              <Bullet>
+                Created new front-end features on eCommerce website using Vue
               </Bullet>
               <Bullet>
                 <Link

@@ -12,10 +12,10 @@ import ywc2 from "../../assets/Achievements/ywc2.jpg";
 
 const competition = [
   {
-    title: "Finalist",
-    detail: "Young Makers Contest 3",
-    img1: ymc1,
-    img2: ymc2,
+    title: "The Winner",
+    detail: "17th Young Webmaster Camp",
+    img1: ywc1,
+    img2: ywc2,
   },
   {
     title: "Finalist",
@@ -24,10 +24,10 @@ const competition = [
     img2: total2,
   },
   {
-    title: "The Winner",
-    detail: "17th Young Webmaster Camp",
-    img1: ywc1,
-    img2: ywc2,
+    title: "Finalist",
+    detail: "Young Makers Contest 3",
+    img1: ymc1,
+    img2: ymc2,
   },
 ];
 
@@ -53,14 +53,10 @@ const Achievements = (props) => {
 
       <Box>
         <div className="RedHightLight">Academic</div>
-        <Bullet className={classes.DetailContainer}>
-          <div className="Bold">Petchra Pra Jom Klao Scholarship</div>
-          <div>@KMUTT</div>
-        </Bullet>
         {[
-          { year: "first", grade: "3.92" },
-          { year: "second", grade: "3.91" },
           { year: "third", grade: "3.90" },
+          { year: "second", grade: "3.91" },
+          { year: "first", grade: "3.92" },
         ].map(({ year, grade }) => (
           <Bullet className={classes.DetailContainer} key={year}>
             <div className="Detail">
@@ -72,6 +68,10 @@ const Achievements = (props) => {
             <div>@KMUTT</div>
           </Bullet>
         ))}
+        <Bullet className={classes.DetailContainer}>
+          <div className="Bold">Petchra Pra Jom Klao Scholarship</div>
+          <div>@KMUTT</div>
+        </Bullet>
       </Box>
     </div>
   );
