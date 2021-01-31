@@ -16,7 +16,7 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(undefined);
 
   useEffect(() => {
-    if (localStorage.getItem('vachanaDarkMode')) {
+    if (!localStorage.getItem('vachanaDarkMode')) {
       setDarkMode(
         window.matchMedia &&
           window.matchMedia('(prefers-color-scheme: dark)').matches

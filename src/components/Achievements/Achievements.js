@@ -12,10 +12,10 @@ import ywc2 from '../../assets/Achievements/ywc2.jpg';
 
 const competition = [
   {
-    title: 'Finalist',
-    detail: 'Young Makers Contest 3',
-    img1: ymc1,
-    img2: ymc2,
+    title: 'The Winner',
+    detail: '17th Young Webmaster Camp',
+    img1: ywc1,
+    img2: ywc2,
   },
   {
     title: 'Finalist',
@@ -24,10 +24,10 @@ const competition = [
     img2: total2,
   },
   {
-    title: 'The Winner',
-    detail: '17th Young Webmaster Camp',
-    img1: ywc1,
-    img2: ywc2,
+    title: 'Finalist',
+    detail: 'Young Makers Contest 3',
+    img1: ymc1,
+    img2: ymc2,
   },
 ];
 
