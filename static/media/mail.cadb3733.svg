@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+  <defs>
+    <style>
+      .a {
+        fill: #ef3f4d;
+      }
+
+      .b {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>Asset 3</title>
+  <g>
+    <circle class="a" cx="7.5" cy="7.5" r="7.5"/>
+    <path class="b" d="M11,4H4a.87.87,0,0,0-.86.87v5.2A.87.87,0,0,0,4,11H11a.87.87,0,0,0,.86-.87V4.9A.87.87,0,0,0,11,4Zm0,1.74L7.5,7.93,4,5.77V4.9L7.5,7.07,11,4.9Z"/>
+  </g>
+</svg>
