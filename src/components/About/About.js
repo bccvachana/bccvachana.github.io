@@ -13,7 +13,11 @@ const About = (props) => {
           <div className={`RedBold ${classes.year}`}>2016 - 2019</div>
           <div>
             <div className='Bold'>Media Technology</div>
-            <a href='https://www.kmutt.ac.th/' target='_blank' rel='noreferrer'>
+            <a
+              href='https://www.kmutt.ac.th/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               King Mongkut's University of Technology Thonburi
             </a>
           </div>
@@ -32,7 +36,11 @@ const About = (props) => {
           <div className={`RedBold ${classes.year}`}>2013 - 2015</div>
           <div>
             <div className='Bold'>Mathematics-Science Program</div>
-            <a href='http://www.bcc.ac.th/' target='_blank' rel='noreferrer'>
+            <a
+              href='http://www.bcc.ac.th/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               Bangkok Christian College
             </a>
           </div>
@@ -44,7 +52,11 @@ const About = (props) => {
           <div className={`RedBold ${classes.year}`}>Aug 2020 - Present</div>
           <div>
             <div className='Bold'>Junior Software Engineer</div>
-            <a href='https://easysunday.com/' target='_blank' rel='noreferrer'>
+            <a
+              href='https://easysunday.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               Sunday
             </a>
           </div>
@@ -67,7 +79,11 @@ const About = (props) => {
           <div className={`RedBold ${classes.year}`}>Jan - May 2020</div>
           <div>
             <div className='Bold'>Teaching Assistant</div>
-            <a href='https://www.kmutt.ac.th/' target='_blank' rel='noreferrer'>
+            <a
+              href='https://www.kmutt.ac.th/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               KMUTT
             </a>
           </div>
@@ -89,7 +105,7 @@ const About = (props) => {
             <a
               href='https://www.boonmeelab.com/'
               target='_blank'
-              rel='noreferrer'
+              rel='noopener noreferrer'
             >
               Boonmee Lab
             </a>
@@ -127,7 +143,15 @@ const About = (props) => {
             <div className='Bold'>Beginner</div>
             <List
               comma
-              lists={['Redux', 'NextJS', 'SQL', 'PHP', 'Vue', 'Electron']}
+              lists={[
+                'Redux',
+                'NextJS',
+                'Typescipt',
+                'SQL',
+                'PHP',
+                'Vue',
+                'Electron',
+              ]}
             />
           </div>
         </div>
