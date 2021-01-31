@@ -1,0 +1,132 @@
+@import 'styles/_var';
+
+.about {
+  @include childrenNotLastChild {
+    margin-bottom: $defaultSpace;
+  }
+}
+
+.twoColumn {
+  @include flex(row, flex-start, flex-start);
+
+  &:not(:last-child) {
+    margin-bottom: $defaultSpace;
+  }
+
+  > * {
+    &:first-child {
+      flex-shrink: 0;
+      margin-right: $defaultSpace;
+    }
+  }
+
+  @include mobileTablet {
+    flex-direction: column;
+  }
+}
+
+.skills {
+  @include flex(row, flex-start, flex-start);
+  margin: -$defaultSpaceHalf;
+
+  > * {
+    width: calc((100% - #{$defaultSpace}) / 2);
+    margin: $defaultSpaceHalf;
+  }
+
+  @include mobile {
+    flex-direction: column;
+
+    > * {
+      width: calc(100% - #{$defaultSpace});
+    }
+  }
+
+  .mainColumn {
+    width: 100px;
+  }
+}
+
+// .TwoColumnGrid {
+//   display: grid;
+//   grid-template-columns: repeat(2, calc((100% - #{$space}) / 2));
+//   grid-gap: $space;
+
+//   @include mobile {
+//     grid-template-columns: 100%;
+//   }
+// }
+
+// .TwoColumnFlex {
+//   @include flex(column, flex-start, flex-start);
+//   margin-bottom: 1rem;
+
+//   &:last-child {
+//     margin-bottom: 0;
+//   }
+
+//   > * {
+//     &:first-child {
+//       flex-shrink: 0;
+//       margin-right: 1rem;
+//     }
+//   }
+
+//   @include desktop {
+//     flex-direction: row;
+//   }
+
+//   :global(.RedBold) {
+//     margin-bottom: 0.2rem;
+
+//     & + * {
+//       padding-left: 1rem;
+
+//       @include desktop {
+//         padding-left: 0;
+//       }
+//     }
+//   }
+
+//   :global(.Bold) {
+//     margin-bottom: 0.2rem;
+//   }
+// }
+
+// .Education {
+//   :global(.RedBold) {
+//     width: 91px;
+//   }
+// }
+
+// .Experience {
+//   :global(.RedBold) {
+//     width: 157px;
+//   }
+
+//   .List {
+//     margin-top: 0.2rem;
+//   }
+// }
+
+// .Skills {
+//   display: grid;
+//   grid-template-columns: auto auto;
+//   grid-gap: 1rem;
+
+//   @include mobile {
+//     grid-template-columns: auto;
+//   }
+
+//   :global(.Bold) {
+//     width: 100px;
+//   }
+// }
+
+// .Languages {
+//   :global(.RedBold) {
+//     display: inline-block;
+//     width: 56px;
+//     margin-right: 1rem;
+//   }
+// }

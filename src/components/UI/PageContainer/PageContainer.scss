@@ -1,0 +1,13 @@
+@import 'styles/_var';
+
+.container {
+  width: 100%;
+  min-width: $pageMinWidth;
+  padding: 0 $defaultSpace;
+  @include flex;
+}
+
+.body {
+  width: 100%;
+  max-width: $pageMaxWidth;
+}

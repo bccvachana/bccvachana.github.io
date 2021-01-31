@@ -1,0 +1,17 @@
+@import 'styles/_var';
+
+.container {
+  height: 30px;
+  margin-bottom: $defaultSpace;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: $color-primary;
+  border-radius: 3rem;
+  color: $color-white;
+  line-height: 1;
+
+  & ~ * {
+    padding-left: $defaultSpace;
+  }
+}

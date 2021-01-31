@@ -1,0 +1,29 @@
+@import 'styles/_var';
+
+.container {
+  @include childrenNotLastChild {
+    margin-bottom: $defaultSpace;
+  }
+}
+
+.item {
+  @include childrenNotFirstChild {
+    margin-top: $defaultSpaceHalf;
+    margin-left: $defaultSpace;
+  }
+
+  a {
+    color: $color-text;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.bullet {
+  max-width: 800px;
+
+  @include childrenNotLastChild {
+    margin-bottom: $defaultSpaceQuarter;
+  }
+}

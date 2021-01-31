@@ -1,0 +1,16 @@
+$color-primary: #ef3f4d;
+$color-white: #ffffff;
+$color-background: #f3f3f4;
+$color-element: $color-white;
+$color-shadow: #ebebec;
+$color-text: #282828;
+$darkMode-color-background: #1e1e1e;
+$darkMode-color-element: #2e2e2e;
+$darkMode-color-shadow: #262626;
+$darkMode-color-text: $color-white;
+
+:export {
+  colorPrimary: $color-primary;
+  colorBackground: $color-background;
+  darkModeColorBackground: $darkMode-color-background;
+}

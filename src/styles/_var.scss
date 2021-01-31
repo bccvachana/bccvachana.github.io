@@ -1,0 +1,25 @@
+@import 'styles/_colors';
+@import 'styles/_fonts';
+@import 'styles/_breakpoints';
+@import 'styles/_mixin';
+
+$pageMinWidth: 320px;
+$pageMaxWidth: 960px;
+
+$defaultSpace: 16px;
+$defaultSpaceHalf: $defaultSpace/2;
+$defaultSpaceQuarter: $defaultSpace/4;
+$defaultSpaceOneHalf: $defaultSpace * 1.5;
+
+$scrollOffset: -3.5 * $defaultSpace;
+// (headerHeight + defaultSpaceHalf) * $defaultSpace
+
+$fontNormal: 400;
+$fontBold: 600;
+
+:export {
+  pageMinWidth: $pageMinWidth;
+  pageMaxWidth: $pageMaxWidth;
+  defaultSpace: $defaultSpace;
+  scrollOffset: $scrollOffset;
+}

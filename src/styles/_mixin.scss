@@ -1,0 +1,45 @@
+@mixin flex($direction: row, $justify: center, $align: center, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin childrenNotFirstChild {
+  > *:not(:first-child) {
+    @content;
+  }
+}
+
+@mixin childrenNotLastChild {
+  > *:not(:last-child) {
+    @content;
+  }
+}
+
+@mixin darkMode {
+  @at-root :global(.darkMode) #{&} {
+    @content;
+  }
+}
+
+@mixin transitionBase($duration: 300) {
+  transition: all #{$duration}ms ease-out;
+}
+
+// text mixin
+@mixin text-sm {
+  font-size: 0.8rem;
+}
+@mixin text-base {
+  font-size: 1rem;
+}
+@mixin text-lg {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+@mixin text-xl {
+  font-size: 3rem;
+  line-height: 1;
+}

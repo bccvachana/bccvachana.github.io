@@ -1,0 +1,10 @@
+@import 'styles/_var';
+
+.box {
+  padding: $defaultSpace;
+  border-radius: $defaultSpaceHalf;
+}
+
+.title {
+  margin-bottom: $defaultSpace;
+}

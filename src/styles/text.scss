@@ -1,0 +1,24 @@
+@import 'styles/_var';
+
+// global text className
+:global {
+  .text-sm {
+    @include text-sm;
+  }
+  .text-base {
+    @include text-base;
+  }
+  .text-lg {
+    @include text-lg;
+  }
+  .text-xl {
+    @include text-xl;
+  }
+
+  .font-normal {
+    font-weight: $fontNormal;
+  }
+  .font-bold {
+    font-weight: $fontBold;
+  }
+}

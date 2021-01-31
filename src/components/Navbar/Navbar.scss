@@ -1,0 +1,72 @@
+@import 'styles/_var';
+
+$navbarSpace: 20px;
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  * {
+    user-select: none;
+  }
+}
+
+.container {
+  height: 3rem;
+}
+
+.body {
+  @include flex($justify: space-between);
+}
+
+.menu {
+  &TabletDesktop {
+    @include flex;
+
+    @include childrenNotLastChild {
+      margin-right: $navbarSpace;
+    }
+  }
+
+  &Mobile {
+    background-color: transparent;
+  }
+}
+
+.line {
+  width: 2px;
+  height: 1.55rem;
+  border-radius: 1rem;
+  background-color: $color-text;
+  @include transitionBase;
+
+  @include darkMode {
+    background-color: $color-white;
+  }
+}
+
+.dropdown {
+  width: 100%;
+  position: fixed;
+  top: 3rem;
+  left: 0;
+  z-index: -1;
+  @include transitionBase;
+
+  &Body {
+    padding: calc(#{$defaultSpace} + #{$defaultSpaceHalf}) 0 $defaultSpace;
+    @include flex(column, $align: flex-start);
+
+    > * {
+      margin: 1rem 0;
+    }
+  }
+}
+
+.shadow {
+  width: 100%;
+  height: $defaultSpaceHalf;
+}

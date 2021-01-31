@@ -1,0 +1,41 @@
+$screen-sm: 768px;
+$screen-md: 1024px;
+$screen-xs-max: $screen-sm - 1;
+$screen-sm-max: $screen-md - 1;
+
+@mixin mobile {
+  @media only screen and (max-width: $screen-xs-max) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin mobileTablet {
+  @media only screen and (max-width: $screen-sm-max) {
+    @content;
+  }
+}
+
+@mixin tabletDesktop {
+  @media only screen and (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+:export {
+  screenSm: $screen-sm;
+  screenMd: $screen-md;
+  screenXsMax: $screen-xs-max;
+  screenSmMax: $screen-sm-max;
+}

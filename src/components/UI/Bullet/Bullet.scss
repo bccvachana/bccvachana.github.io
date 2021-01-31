@@ -1,0 +1,17 @@
+@import 'styles/_var';
+
+.container {
+  @include flex(row, flex-start, flex-start);
+}
+
+.bullet {
+  position: relative;
+  top: 7px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  margin-right: 0.7rem;
+  background-color: $color-primary;
+  border-radius: 10px;
+  flex-shrink: 0;
+}

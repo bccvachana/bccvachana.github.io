@@ -1,0 +1,15 @@
+@import 'styles/_var';
+
+.link {
+  cursor: pointer;
+  @include transitionBase(100);
+
+  &:hover,
+  &.active {
+    color: $color-primary;
+  }
+
+  @include mobile {
+    @include text-lg;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "hello": "Hello, I'm",
+  "firstName": "Vachana",
+  "lastName": "Chongruchipinyo",
+  "position": "Frontend Developer",
+  "detail": "I’m an energetic, fast-learning and hard-working web developer\nwith one year of experience. I am seeking an opportunity\nto expand my programming knowledge and skills.",
+  "contact": [
+    {
+      "type": "phone",
+      "href": "tel:0826771977"
+    },
+    {
+      "type": "mail",
+      "href": "mailto:vachana.chong@gmail.com"
+    },
+    {
+      "type": "facebook",
+      "href": "https://web.facebook.com/bccvachana",
+      "target": "_blank"
+    },
+    {
+      "type": "github",
+      "href": "https://github.com/bccvachana",
+      "target": "_blank"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "education": {
+    "title": "Education",
+    "content": [
+      {
+        "year": "2016 - 2019",
+        "title": "Media Technology",
+        "location": "King Mongkut's University of Technology Thonburi",
+        "locationLink": "https://www.kmutt.ac.th/",
+        "bullet": [
+          "Outstanding Academic Performance in the third year with GPAX 3.90",
+          "Outstanding Academic Performance in the second year with GPAX 3.91",
+          "Outstanding Academic Performance in the first year with GPAX 3.92",
+          "Petchra Pra Jom Klao Scholarship"
+        ]
+      },
+      {
+        "year": "2013 - 2015",
+        "title": "Mathematics-Science Program",
+        "location": "Bangkok Christian College",
+        "locationLink": "http://www.bcc.ac.th/"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "content": [
+      {
+        "year": "Aug 2020 - Present",
+        "title": "Junior Software Engineer",
+        "location": "Sunday",
+        "locationLink": "https://easysunday.com/",
+        "bullet": [
+          "Main responsible for internal platform front-end",
+          "Implemented websites, mobile application and landing pages front-end using React and NextJS",
+          "Designed and developed front-end platform for underwriting insurance policies using React/Redux, Typescript, Antd and SCSS"
+        ],
+        "list": [
+          "React/Redux",
+          "NextJS",
+          "Typescipt",
+          "NodeJS"
+        ]
+      },
+      {
+        "year": "Jan - May 2020",
+        "title": "Teaching Assistant",
+        "location": "KMUTT",
+        "locationLink": "https://www.kmutt.ac.th/",
+        "bullet": [
+          "Asisted and mentored students in Web Programming class"
+        ],
+        "list": [
+          "HTML",
+          "CSS",
+          "PHP",
+          "SQL"
+        ]
+      },
+      {
+        "year": "Jun - Jul 2019",
+        "title": "Developer Intern",
+        "location": "Boonmee Lab",
+        "locationLink": "https://www.boonmeelab.com/",
+        "bullet": [
+          "Implemented services for chatbot API using NodeJS and Dialogflow",
+          "Built an interactive map and data visualization website using NuxtJS and Mapbox",
+          "Created new front-end features on eCommerce website using Vue",
+          {
+            "to": "https://medium.com/@vachanachongrujipinyo/ประสบการณ์ฝึกงาน-เปลี่ยนชีวิต-ที่-boonmee-lab-70b568f95f8e",
+            "title": "medium"
+          }
+        ],
+        "list": [
+          "NodeJS",
+          "Vue",
+          "Dialogflow"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "programming": {
+      "title": "Programming",
+      "content": [
+        {
+          "title": "Intermediate",
+          "list": [
+            "React",
+            "NodeJS",
+            "ES6",
+            "SCSS"
+          ]
+        },
+        {
+          "title": "Beginner",
+          "list": [
+            "Redux",
+            "NextJS",
+            "SQL",
+            "PHP",
+            "Vue",
+            "Electron"
+          ]
+        }
+      ]
+    },
+    "other": {
+      "title": "Other",
+      "list": [
+        "UX/UI Design",
+        "Design Thinking",
+        "Dialogflow",
+        "Arduino",
+        "Adobe Illustrator",
+        "Adobe XD"
+      ]
+    }
+  },
+  "languages": {
+    "title": "Languages",
+    "thai": {
+      "title": "Thai",
+      "content": "Native"
+    },
+    "english": {
+      "title": "English",
+      "content": "Intermediate"
+    }
+  },
+  "interests": {
+    "title": "Interests",
+    "list": [
+      "Backend",
+      "Mobile Application",
+      "Chatbot",
+      "Machine Learning"
+    ]
+  }
+}

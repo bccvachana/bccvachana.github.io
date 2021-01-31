@@ -1,0 +1,73 @@
+@import 'styles/_var';
+@import './text.scss';
+
+:global {
+  html {
+    min-width: $pageMinWidth;
+    padding-top: 3.5rem;
+    font-family: Prompt;
+    font-size: 16px;
+    line-height: 1.375;
+    overflow-x: hidden;
+
+    * {
+      margin: 0;
+      padding: 0;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      box-sizing: border-box;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+
+      &:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  body {
+    background-color: $color-background;
+    color: $color-text;
+    @include transitionBase;
+
+    &.darkMode {
+      background-color: $darkMode-color-background;
+      color: $darkMode-color-text;
+    }
+  }
+
+  .page {
+    > * {
+      padding: $defaultSpace 0 $defaultSpaceHalf;
+    }
+  }
+
+  .bg-color-primary {
+    background-color: $color-primary;
+  }
+
+  .color-primary {
+    color: $color-primary;
+  }
+
+  .bg-color-element {
+    background-color: $color-element;
+    @include transitionBase;
+
+    @include darkMode {
+      background-color: $darkMode-color-element;
+    }
+  }
+
+  .bg-color-shadow {
+    background-color: $color-shadow;
+    @include transitionBase;
+
+    @include darkMode {
+      background-color: $darkMode-color-shadow;
+    }
+  }
+}

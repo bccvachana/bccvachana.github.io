@@ -1,0 +1,11 @@
+@import 'styles/_var';
+
+.container {
+  > div {
+    display: inline-block;
+  }
+
+  @include childrenNotLastChild {
+    margin-right: 0.7rem;
+  }
+}

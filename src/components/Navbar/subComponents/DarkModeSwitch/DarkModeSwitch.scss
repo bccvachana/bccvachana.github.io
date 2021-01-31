@@ -1,0 +1,44 @@
+@import 'styles/_var';
+
+$switchSize: 1rem;
+$switchContainerBorderSize: 2px;
+
+.darkModeSwitch {
+  @include flex;
+  cursor: pointer;
+}
+
+.toggleSwitchContainer {
+  width: calc(#{$switchSize * 2} + #{$switchContainerBorderSize * 2});
+  height: calc(#{$switchSize} + #{$switchContainerBorderSize * 2});
+  margin-right: $defaultSpaceHalf;
+  border: $switchContainerBorderSize solid $color-text;
+  border-radius: $switchSize;
+  @include flex($justify: flex-start);
+  @include transitionBase;
+
+  @include darkMode {
+    border-color: $color-white;
+  }
+}
+
+.toggleSwitch {
+  width: $switchSize;
+  height: $switchSize;
+  background-color: $color-primary;
+  border: 1px solid $color-element;
+  border-radius: $switchSize;
+  @include transitionBase;
+
+  @include darkMode {
+    border-color: $darkMode-color-element;
+  }
+}
+
+.label {
+  @include text-sm;
+
+  @include mobile {
+    @include text-base;
+  }
+}

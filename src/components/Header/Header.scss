@@ -1,0 +1,90 @@
+@import 'styles/_var';
+
+.header {
+  padding-top: $defaultSpaceOneHalf !important;
+  @include flex(row, flex-start, flex-start);
+
+  @include mobileTablet {
+    text-align: center;
+    @include flex(column, $align: center);
+  }
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+  border: 10px solid $color-element;
+  border-radius: 150px;
+  @include transitionBase;
+
+  @include darkMode {
+    border-color: $darkMode-color-element;
+  }
+
+  @include desktop {
+    margin-right: $defaultSpaceOneHalf;
+  }
+
+  @include mobileTablet {
+    margin-bottom: $defaultSpaceOneHalf;
+  }
+}
+
+.content {
+  width: 100%;
+  @include flex(column, $align: flex-start);
+
+  @include childrenNotLastChild {
+    margin-bottom: $defaultSpace;
+  }
+
+  .firstName {
+    margin-bottom: 0;
+  }
+
+  .lastName {
+    margin-bottom: $defaultSpaceHalf;
+  }
+
+  .detail {
+    white-space: pre-wrap;
+  }
+
+  @include mobileTablet {
+    align-items: center;
+
+    .detail {
+      max-width: 300px;
+      white-space: unset;
+    }
+  }
+
+  @include mobile {
+    align-items: center;
+
+    .firstName {
+      font-size: 3.5rem;
+    }
+
+    .lastName {
+      font-size: 2rem;
+    }
+  }
+}
+
+.contact {
+  @include flex;
+
+  > * {
+    @include flex;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @include childrenNotLastChild {
+    margin-right: $defaultSpace;
+  }
+}
