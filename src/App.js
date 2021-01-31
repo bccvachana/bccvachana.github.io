@@ -1,24 +1,34 @@
-import React, { useState, useEffect } from "react";
-import OnImagesLoaded from "react-on-images-loaded";
+import React, { useState, useEffect } from 'react';
+import OnImagesLoaded from 'react-on-images-loaded';
 
-import Loading from "./components/Loading/Loading";
-import NavBar from "./components/NavBar/NavBar";
-import Header from "./components/Header/Header";
-import About from "./components/About/About";
-import Achievements from "./components/Achievements/Achievements";
-import Projects from "./components/Projects/Projects";
-import Footer from "./components/Footer/Footer";
+import Loading from './components/Loading/Loading';
+import NavBar from './components/NavBar/NavBar';
+import Header from './components/Header/Header';
+import About from './components/About/About';
+import Achievements from './components/Achievements/Achievements';
+import Projects from './components/Projects/Projects';
+import Footer from './components/Footer/Footer';
 
 export const Context = React.createContext();
 
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("vachanaDarkMode") === "true" ? true : false
-  );
+  const [darkMode, setDarkMode] = useState(undefined);
+
   useEffect(() => {
-    localStorage.setItem("vachanaDarkMode", darkMode);
-    document.body.className = darkMode ? "DarkMode" : "";
+    if (localStorage.getItem('vachanaDarkMode')) {
+      setDarkMode(
+        window.matchMedia &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches
+      );
+    } else {
+      setDarkMode(localStorage.getItem('vachanaDarkMode') === 'true');
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('vachanaDarkMode', darkMode);
+    document.body.className = darkMode ? 'DarkMode' : '';
   }, [darkMode]);
 
   return (
@@ -38,7 +48,7 @@ const App = () => {
         }}
       >
         <Loading />
-        <div className="App">
+        <div className='App'>
           <NavBar />
           <Header />
           <About />

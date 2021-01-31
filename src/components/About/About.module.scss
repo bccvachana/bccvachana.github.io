@@ -1,7 +1,7 @@
-@import "../../var";
+@import '../../var';
 
 .About {
-  >div {
+  > div {
     margin-top: $space;
 
     &:first-child {
@@ -28,7 +28,7 @@
     margin-bottom: 0;
   }
 
-  >* {
+  > * {
     &:first-child {
       flex-shrink: 0;
       margin-right: 1rem;
@@ -42,7 +42,7 @@
   :global(.RedBold) {
     margin-bottom: 0.2rem;
 
-    &+* {
+    & + * {
       padding-left: 1rem;
 
       @include desktop {
@@ -56,19 +56,30 @@
   }
 }
 
-.Education {
-  :global(.RedBold) {
-    width: 91px;
-  }
-}
-
-.Experience {
-  :global(.RedBold) {
-    width: 122px;
+.EducationExperience {
+  > *:not(:last-child) {
+    margin-bottom: $space;
   }
 
-  .List {
-    margin-top: 0.2rem;
+  .year ~ * {
+    padding-left: $space;
+  }
+
+  .item {
+    > *:not(:last-child) {
+      margin-bottom: $space/4;
+    }
+  }
+
+  .bullet {
+    max-width: 800px;
+  }
+
+  a {
+    color: inherit;
+    &:hover {
+      color: $color-accent;
+    }
   }
 }
 
