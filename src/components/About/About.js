@@ -184,6 +184,7 @@ const About = (props) => {
           <List
             comma
             lists={[
+              'SVG Animation',
               'Backend',
               'Mobile Application',
               'Chatbot',
