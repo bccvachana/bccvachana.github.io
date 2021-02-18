@@ -89,7 +89,7 @@ const About = (props) => {
           </div>
           <div className={classes.bullet}>
             <Bullet>
-              Asisted and mentored students in web programming class
+              Assisted and mentored students in web programming class
             </Bullet>
           </div>
           <List
