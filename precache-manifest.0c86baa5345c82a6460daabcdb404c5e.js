@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4c3e1b456de8069748d957f4b8f0e79e",
+    "revision": "92969390a1e524eafe0569ad760fc962",
     "url": "/index.html"
   },
   {
-    "revision": "ade64484bf6fc1bc6d9a",
+    "revision": "ef6cf1bff928bf59a161",
     "url": "/static/css/main.a35672ea.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.38b79ea1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ade64484bf6fc1bc6d9a",
-    "url": "/static/js/main.8fb53463.chunk.js"
+    "revision": "ef6cf1bff928bf59a161",
+    "url": "/static/js/main.d243c572.chunk.js"
   },
   {
     "revision": "cb359a36cddd8b609b03",
@@ -124,8 +124,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Prompt-Thin.ddcfbf89.ttf"
   },
   {
-    "revision": "889ec2c26542734c622b3104e69f53e4",
-    "url": "/static/media/Resume-Vachana.889ec2c2.pdf"
+    "revision": "a0c79ccb8e6cc5e877f4aed222fd81d3",
+    "url": "/static/media/Resume-Vachana.a0c79ccb.pdf"
   },
   {
     "revision": "85454b1194e09335b728c20ef378b21a",
